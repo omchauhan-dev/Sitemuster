@@ -26,6 +26,7 @@ jobs:
 
       - name: Unpack Flutter project
         run: |
+          base64 -d SiteMuster-Flutter.zip.base64 > SiteMuster-Flutter.zip
           unzip SiteMuster-Flutter.zip
           cd SiteMuster-Flutter
           flutter create --platforms=android .
